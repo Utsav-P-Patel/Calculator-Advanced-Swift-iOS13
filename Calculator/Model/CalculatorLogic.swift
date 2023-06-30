@@ -19,7 +19,7 @@ struct CalculatorLogic {
     }
     
     mutating func calculate(symbol: String) -> Double? {
-       
+        
         if let n = number {
             switch symbol {
             case "+/-":
@@ -34,13 +34,13 @@ struct CalculatorLogic {
                 intermediateCalculation = (n1: n, calcMethod: symbol)
             }
         }
-        return nil 
+        return nil
     }
     
     private func performTwoNumCalculation(n2: Double) -> Double? {
         
         if let n1 = intermediateCalculation?.n1,
-            let operation = intermediateCalculation?.calcMethod {
+           let operation = intermediateCalculation?.calcMethod {
             
             switch operation {
             case "+":
